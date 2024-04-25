@@ -12,7 +12,40 @@
         {
             Console.WriteLine("Ahoj, pojď hádat čísla!");
 
-            int hadaneCislo = 
+            Random nh = new Random();
+            int cisloSpravne = nh.Next(0, 100);
+            Console.WriteLine("zedej svůj tip od 0 do 100:");
+            bool uhadlJsi = false;
+
+            while (!uhadlJsi)
+            {
+                string zadanyTip = Console.ReadLine();
+
+                int tip = int.Parse(zadanyTip);
+
+                if (tip > cisloSpravne)
+                {
+                    Console.WriteLine("tip je moc velký, zadej nový tip:");
+                   
+                }
+                else if (tip < cisloSpravne)
+                {
+                    Console.WriteLine("tip je moc malý, zadej nový tip:");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("uhádl jsi, gratuluji");
+                    uhadlJsi = true;
+                }
+            }
+            
+           
+
+            
+                
+            
+            
         }
     }
 }
