@@ -51,7 +51,7 @@ it was the grayish white of old porridge.";
         string oddelovac = new string ('-',20);
         Console.WriteLine("Oddelovac ma 20 pomlcek - ".PadRight(padding) + (oddelovac == "--------------------"));
 
-        // Pozmen nasledujici porovnani textu tak, aby se do konzole vypisovalo True, aniz bys menila hodnoty promennych
+        // Pozmen nasledujici prvniPorovnani textu tak, aby se do konzole vypisovalo True, aniz bys menila hodnoty promennych
 
         string jmeno1 = "Katka";
         string jmeno2 = "katka";
@@ -75,12 +75,49 @@ it was the grayish white of old porridge.";
         string blabol3 = "abbb";
         string prvni = null;
 
-        Console.WriteLine("Prvni v abecede je blabol3 - ".PadRight(padding) + (prvni == blabol3));
+            int prvniPorovnani = string.Compare(blabol1, blabol2);
+
+            if (prvniPorovnani<0)
+            {
+                int dalsiPorovnani = string.Compare(blabol1, blabol3);
+
+                if (dalsiPorovnani<0)
+                {
+                    prvni = blabol1;     
+                }
+                else
+                {
+                    prvni = blabol3;
+                }
+                
+            }
+            else 
+            {
+                int druhePorovnani = string.Compare(blabol2, blabol3);
+
+                if (druhePorovnani < 0)
+                {
+                    prvni = blabol2;
+                }
+                else
+                {
+                    prvni = blabol3;
+                }
+                
+            }
+
+           
+
+
+
+            Console.WriteLine("Prvni v abecede je blabol3 - ".PadRight(padding) + (prvni == blabol3));
 
         // Najdi prvni rozkazovaci vetu v textu a uloz ji do promenne 'veta' bez vykricniku a uvozovek.
         
-        
-        string veta = null;
+        int indexVykricnik = text.IndexOf("!");
+            Console.WriteLine(indexVykricnik);
+
+            string veta = null;
         Console.WriteLine("Prvni rozkazovaci veta je 'Hurry up, boy' - ".PadRight(padding) + (veta == "Hurry up, boy"));
 
         // Zjisti, kolikrat se v textu vyskytuje slovo "and" bez ohledu na velikosti prvniho pismenka a vysledek uloz do promenne 'pocetAnd'.
