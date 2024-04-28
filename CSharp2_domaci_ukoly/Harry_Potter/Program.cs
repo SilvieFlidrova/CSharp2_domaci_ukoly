@@ -39,10 +39,9 @@ it was the grayish white of old porridge.";
             bool textMaSmysl = false;
             Console.WriteLine("Text dava smysl - ".PadRight(padding) + (textMaSmysl == true));
 
-         // !Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky. !odečíst separatory 
+         // !Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky. !odečíst separatory? 
 
-            char[] pocetZnaku = text.ToCharArray();
-            int delkaTextu = pocetZnaku.Length + 1;
+            int delkaTextu = text.Length + 1;
 
             Console.WriteLine(delkaTextu);
             Console.WriteLine("Delka text je spravna - ".PadRight(padding) + (delkaTextu == 1001));
