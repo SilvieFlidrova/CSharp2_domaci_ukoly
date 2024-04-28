@@ -34,14 +34,15 @@ with one hand and glancing at it. His face went from red to green faster
 than a set of traffic lights. And it didn't stop there. Within seconds
 it was the grayish white of old porridge.";
 
-            // !Nez zacnes volat nejake stringove funkce na nejake stringove promenne, nezapomen overit, ze obsahuje smysluplnou hodnotu. Vysledek uloz do promenne 'textMaSmysl'.
+         // !Nez zacnes volat nejake stringove funkce na nejake stringove promenne, nezapomen overit, ze obsahuje smysluplnou hodnotu. Vysledek uloz do promenne 'textMaSmysl'.
+            
             bool textMaSmysl = false;
             Console.WriteLine("Text dava smysl - ".PadRight(padding) + (textMaSmysl == true));
 
-            // !Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky.
+         // !Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky. !odečíst separatory 
 
             char[] pocetZnaku = text.ToCharArray();
-            int delkaTextu = pocetZnaku.Length;
+            int delkaTextu = pocetZnaku.Length + 1;
 
             Console.WriteLine(delkaTextu);
             Console.WriteLine("Delka text je spravna - ".PadRight(padding) + (delkaTextu == 1001));
@@ -65,10 +66,11 @@ it was the grayish white of old porridge.";
 
             // Zjisti, jestli je text spravne ukonceny interpunkci. Vysledek uloz do promenne 'jeSpravneUkoncen'.
 
-            bool jeSpravneUkoncen = text.EndsWith('.') || text.EndsWith('!') || text.EndsWith('?');
-        Console.WriteLine("Text je spravne ukoncen interpunkci - ".PadRight(padding) + (jeSpravneUkoncen == true));
+            char posledniZnak = text[text.Length - 1];
+            bool jeSpravneUkoncen = char.IsPunctuation(posledniZnak);
+            Console.WriteLine("Text je spravne ukoncen interpunkci - ".PadRight(padding) + (jeSpravneUkoncen == true));
 
-        // Pomoci abecedniho porovnavani zjisti, ktery z nasledujicich textu je podle abecedy prvni a jeho hodnotu prirad do promenne 'prvni'.
+            // Pomoci abecedniho porovnavani zjisti, ktery z nasledujicich textu je podle abecedy prvni a jeho hodnotu prirad do promenne 'prvni'.
 
         string blabol1 = "abbc";
         string blabol2 = "acbc";
@@ -116,9 +118,9 @@ it was the grayish white of old porridge.";
             string veta = null;
         Console.WriteLine("Prvni rozkazovaci veta je 'Hurry up, boy' - ".PadRight(padding) + (veta == "Hurry up, boy"));
 
-        // Zjisti, kolikrat se v textu vyskytuje slovo "and" bez ohledu na velikosti prvniho pismenka a vysledek uloz do promenne 'pocetAnd'.
-        // Abych vam to zjednodusil, muzete se spolehnout, ze tato anglicka spojka bude v textu vzdy obklopena mezerou na kazde strane.
-        // Tim se snadno vylouci jakekoliv vyskyty "and" v ramci jinych slov.
+            // Zjisti, kolikrat se v textu vyskytuje slovo "and" bez ohledu na velikosti prvniho pismenka a vysledek uloz do promenne 'pocetAnd'.
+            // Abych vam to zjednodusil, muzete se spolehnout, ze tato anglicka spojka bude v textu vzdy obklopena mezerou na kazde strane.
+            // Tim se snadno vylouci jakekoliv vyskyty "and" v ramci jinych slov.
 
         
             string[] poleCast = text.Split(" and ");
