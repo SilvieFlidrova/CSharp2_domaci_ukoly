@@ -55,7 +55,7 @@ it was the grayish white of old porridge.";
 
         string jmeno1 = "Katka";
         string jmeno2 = "katka";
-        bool jeStejne = false;
+        bool jeStejne = string.Equals(jmeno1, jmeno2, StringComparison.InvariantCultureIgnoreCase);
         Console.WriteLine("Obe promenne obsahuji stejne jmeno - ".PadRight(padding) + jeStejne);
 
         // Zjisti, jestli je v textu zminka o obtloustle "tete" Harryho. Jmenuje se Marge. Vysledek uloz do promenne 'piseSeOMarge';
