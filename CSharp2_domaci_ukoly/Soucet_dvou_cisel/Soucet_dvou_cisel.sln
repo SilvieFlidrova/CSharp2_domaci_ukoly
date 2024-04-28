@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hadani_cisla", "Hadani_cisla\Hadani_cisla.csproj", "{6145663D-FF66-4D5D-811D-142F1EA2AC89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soucet_dvou_cisel", "Soucet_dvou_cisel.csproj", "{3F0AD167-81E3-4742-B0F1-5965BAFC38CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6145663D-FF66-4D5D-811D-142F1EA2AC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6145663D-FF66-4D5D-811D-142F1EA2AC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6145663D-FF66-4D5D-811D-142F1EA2AC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6145663D-FF66-4D5D-811D-142F1EA2AC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0AD167-81E3-4742-B0F1-5965BAFC38CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0AD167-81E3-4742-B0F1-5965BAFC38CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0AD167-81E3-4742-B0F1-5965BAFC38CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0AD167-81E3-4742-B0F1-5965BAFC38CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {83EA8945-B5DE-4954-A975-F7C229DB66E1}
+		SolutionGuid = {7ADFF57C-FAD7-45F8-8355-DBE2B224F280}
 	EndGlobalSection
 EndGlobal

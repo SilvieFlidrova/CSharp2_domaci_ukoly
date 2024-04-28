@@ -8,9 +8,9 @@
             Console.WriteLine("Ahoj! Když mi zadáš počet hvězdiček, vykreslím je");
 
             Console.WriteLine("zadej počet hvězdiček:");
-            string zadanyPocetHvezdicek = Console.ReadLine();
+          
             int pocetHvezdicek;
-            bool jeCislo = int.TryParse(zadanyPocetHvezdicek, out pocetHvezdicek);
+            bool jeCislo = int.TryParse(Console.ReadLine(), out pocetHvezdicek);
             if (!jeCislo)
             {
                 Console.WriteLine("Nezadal jsi platné číslo");
