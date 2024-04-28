@@ -38,14 +38,17 @@ it was the grayish white of old porridge.";
         bool textMaSmysl = false;
         Console.WriteLine("Text dava smysl - ".PadRight(padding) + (textMaSmysl == true));
 
-        // Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky.
+            // Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky.
 
-        int delkaTextu = 0;
+            char[] pocetZnaku = text.ToCharArray();
+        int delkaTextu = pocetZnaku.Length;
+
+        Console.WriteLine(delkaTextu);
         Console.WriteLine("Delka text je spravna - ".PadRight(padding) + (delkaTextu == 1001));
 
         // Do promenne 'oddelovac' vloz text, ktery se sklada pouze z pomlcek a jeho delka je presne 20. Pouzij k tomu konstruktor typu string.
 
-        string oddelovac = null;
+        string oddelovac = new string ('-',20);
         Console.WriteLine("Oddelovac ma 20 pomlcek - ".PadRight(padding) + (oddelovac == "--------------------"));
 
         // Pozmen nasledujici porovnani textu tak, aby se do konzole vypisovalo True, aniz bys menila hodnoty promennych
