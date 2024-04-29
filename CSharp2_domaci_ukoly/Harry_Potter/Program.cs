@@ -109,12 +109,15 @@ it was the grayish white of old porridge.";
 
             Console.WriteLine("Prvni v abecede je blabol3 - ".PadRight(padding) + (prvni == blabol3));
 
-        // !Najdi prvni rozkazovaci vetu v textu a uloz ji do promenne 'veta' bez vykricniku a uvozovek.
-        
-        int indexVykricnik = text.IndexOf("!");
-            Console.WriteLine(indexVykricnik);
+            // !Najdi prvni rozkazovaci vetu v textu a uloz ji do promenne 'veta' bez vykricniku a uvozovek.
 
-            string veta = null;
+            int poziceVykricniku = text.IndexOf("!");    
+            string textPoVykricnik = text.Substring(0, poziceVykricniku);
+            string[] vetyPoVykricnik = textPoVykricnik.Split(". ");
+
+            string veta = vetyPoVykricnik[vetyPoVykricnik.Length - 1].Trim('"');
+            
+
         Console.WriteLine("Prvni rozkazovaci veta je 'Hurry up, boy' - ".PadRight(padding) + (veta == "Hurry up, boy"));
 
             // Zjisti, kolikrat se v textu vyskytuje slovo "and" bez ohledu na velikosti prvniho pismenka a vysledek uloz do promenne 'pocetAnd'.
