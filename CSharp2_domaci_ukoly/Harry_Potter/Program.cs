@@ -39,11 +39,10 @@ it was the grayish white of old porridge.";
             bool textMaSmysl = text.Length>0; //tzn. text neni prazdny
             Console.WriteLine("Text dava smysl - ".PadRight(padding) + (textMaSmysl == true));
 
-         // !Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky. !odečíst separatory? 
+            //Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky. ==> jak odečíst separatory? 
+           
+            int delkaTextu = text.Replace("\r\n", " ").Length;
 
-            int delkaTextu = text.Length + 1;
-
-            Console.WriteLine(delkaTextu);
             Console.WriteLine("Delka text je spravna - ".PadRight(padding) + (delkaTextu == 1001));
 
             // Do promenne 'oddelovac' vloz text, ktery se sklada pouze z pomlcek a jeho delka je presne 20. Pouzij k tomu konstruktor typu string.
@@ -111,11 +110,11 @@ it was the grayish white of old porridge.";
 
             //Najdi prvni rozkazovaci vetu v textu a uloz ji do promenne 'veta' bez vykricniku a uvozovek.
 
-            int poziceVykricniku = text.IndexOf("!");    
-            string textPoVykricnik = text.Substring(0, poziceVykricniku);
-            string[] vetyPoVykricnik = textPoVykricnik.Split(". ");
+            int poziceVykricniku = text.IndexOf("!");    //najdu vykricnik
+            string textPoVykricnik = text.Substring(0, poziceVykricniku); //odriznu vse od vykricniku (vcetne)
+            string[] vetyPoVykricnik = textPoVykricnik.Split(". "); //rozdelim text pred vykricnikem na jednotlive vety, ta rozkazovaci je tedy posledni
 
-            string veta = vetyPoVykricnik[vetyPoVykricnik.Length - 1].Trim('"');
+            string veta = vetyPoVykricnik[vetyPoVykricnik.Length - 1].Trim('"'); //poslední vete oriznu uvozovky, pokud tam jsou
             
 
             Console.WriteLine("Prvni rozkazovaci veta je 'Hurry up, boy' - ".PadRight(padding) + (veta == "Hurry up, boy"));
