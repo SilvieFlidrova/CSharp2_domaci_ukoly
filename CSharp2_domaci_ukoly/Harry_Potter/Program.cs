@@ -34,9 +34,9 @@ with one hand and glancing at it. His face went from red to green faster
 than a set of traffic lights. And it didn't stop there. Within seconds
 it was the grayish white of old porridge.";
 
-         // !Nez zacnes volat nejake stringove funkce na nejake stringove promenne, nezapomen overit, ze obsahuje smysluplnou hodnotu. Vysledek uloz do promenne 'textMaSmysl'.
-            
-            bool textMaSmysl = false;
+            //Nez zacnes volat nejake stringove funkce na nejake stringove promenne, nezapomen overit, ze obsahuje smysluplnou hodnotu. Vysledek uloz do promenne 'textMaSmysl'.
+           
+            bool textMaSmysl = text.Length>0; //tzn. text neni prazdny
             Console.WriteLine("Text dava smysl - ".PadRight(padding) + (textMaSmysl == true));
 
          // !Do promenne 'delkaTextu' uloz celkovou delku uryvku z knizky. !odečíst separatory? 
@@ -109,7 +109,7 @@ it was the grayish white of old porridge.";
 
             Console.WriteLine("Prvni v abecede je blabol3 - ".PadRight(padding) + (prvni == blabol3));
 
-            // !Najdi prvni rozkazovaci vetu v textu a uloz ji do promenne 'veta' bez vykricniku a uvozovek.
+            //Najdi prvni rozkazovaci vetu v textu a uloz ji do promenne 'veta' bez vykricniku a uvozovek.
 
             int poziceVykricniku = text.IndexOf("!");    
             string textPoVykricnik = text.Substring(0, poziceVykricniku);
@@ -118,7 +118,7 @@ it was the grayish white of old porridge.";
             string veta = vetyPoVykricnik[vetyPoVykricnik.Length - 1].Trim('"');
             
 
-        Console.WriteLine("Prvni rozkazovaci veta je 'Hurry up, boy' - ".PadRight(padding) + (veta == "Hurry up, boy"));
+            Console.WriteLine("Prvni rozkazovaci veta je 'Hurry up, boy' - ".PadRight(padding) + (veta == "Hurry up, boy"));
 
             // Zjisti, kolikrat se v textu vyskytuje slovo "and" bez ohledu na velikosti prvniho pismenka a vysledek uloz do promenne 'pocetAnd'.
             // Abych vam to zjednodusil, muzete se spolehnout, ze tato anglicka spojka bude v textu vzdy obklopena mezerou na kazde strane.
